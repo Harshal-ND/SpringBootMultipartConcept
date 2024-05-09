@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,10 @@ public class MultipartService {
 		multiPart.setFileName(file.getOriginalFilename());
 		multiPart.setFileAddress(filePath.toString());
 		return multipartRepository.save(multiPart);
+	}
+
+	public List<MultiPart> getAllFiles() {
+		return multipartRepository.findAll();
 	}
 
 }

@@ -1,9 +1,11 @@
 package com.multipartConcept.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,12 @@ public class MultipartController {
 			throws IllegalStateException, IOException {
 
 		return ResponseEntity.ok(multipartService.saveFile(file));
+	}
+
+	@GetMapping("/getFiles")
+	public ResponseEntity<List<MultiPart>> getAllFiles() throws IllegalStateException, IOException {
+
+		return ResponseEntity.ok(multipartService.getAllFiles());
 	}
 
 }
