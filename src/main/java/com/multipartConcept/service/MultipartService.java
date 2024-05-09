@@ -19,7 +19,7 @@ public class MultipartService {
 	@Autowired
 	private MultipartRepository multipartRepository;
 
-	private final String uploadDir = "/data/Spring_tool/Spring_workspace/SpringBootMultipartConcept/src/main/resources/static";
+	private final String uploadDir = "/data/Spring_tool/Spring_workspace/SpringBootMultipartConcept/src/main/resources/static/Files";
 
 	public MultiPart saveFile(MultipartFile file) throws IllegalStateException, IOException {
 		// Saving a file to a particular directory
