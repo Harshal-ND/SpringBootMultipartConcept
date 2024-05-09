@@ -16,15 +16,19 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MultiPart {
-	
+public class FileData {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	private String fileName;
-	
-	
-	private String fileAddress;
+		private String userFirstName;
+		private String userLastName;
+		private String userPhnNumber;
+
+	private String fileName1;
+	private String fileAddress1;
+
+	private String fileName2;
+	private String fileAddress2;
 
 }
